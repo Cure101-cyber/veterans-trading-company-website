@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   ShieldCheck,
@@ -87,16 +86,16 @@ export default function Home() {
               {COMPANY.description}
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <Link to="/services" className="btn-accent">
+              <a href="/services/" className="btn-accent">
                 Explore Our Services
                 <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                to="/about"
+              </a>
+              <a
+                href="/about/"
                 className="btn-outline border-navy-500 bg-white/5 text-white hover:bg-white/10"
               >
                 Our History
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -133,10 +132,10 @@ export default function Home() {
               business organizations and received multiple awards for designing and implementing
               innovative supply chain models.
             </p>
-            <Link to="/about" className="mt-6 inline-flex items-center gap-2 font-semibold text-navy-800 hover:text-navy-900">
+            <a href="/about/" className="mt-6 inline-flex items-center gap-2 font-semibold text-navy-800 hover:text-navy-900">
               Learn More About VTC
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {VALUES.map((v) => {
@@ -174,9 +173,9 @@ export default function Home() {
             {SERVICES.map((service) => {
               const Icon = SERVICE_ICONS[service.id] || PackageCheck;
               return (
-                <Link
+                <a
                   key={service.id}
-                  to="/services"
+                  href="/services/"
                   className="card-hover group flex flex-col p-6"
                 >
                   <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-navy-800 text-white transition-transform group-hover:scale-110">
@@ -193,7 +192,7 @@ export default function Home() {
                     Learn More
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
-                </Link>
+                </a>
               );
             })}
           </div>
@@ -257,10 +256,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <Link to="/quality" className="mt-8 inline-flex items-center gap-2 font-semibold text-white hover:text-accent-400">
+            <a href="/quality/" className="mt-8 inline-flex items-center gap-2 font-semibold text-white hover:text-accent-400">
               Learn More About Our Quality
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[

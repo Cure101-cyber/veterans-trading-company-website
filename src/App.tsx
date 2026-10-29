@@ -1,4 +1,3 @@
-import { Routes, Route } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
@@ -8,24 +7,31 @@ import Leadership from '@/pages/Leadership';
 import Suppliers from '@/pages/Suppliers';
 import News from '@/pages/News';
 import Contact from '@/pages/Contact';
-import ProcurementPortal from '@/pages/ProcurementPortal';
+import Careers from '@/pages/Careers';
 import NotFound from '@/pages/NotFound';
 
+const pages = {
+  home: Home,
+  about: About,
+  services: Services,
+  quality: Quality,
+  leadership: Leadership,
+  suppliers: Suppliers,
+  news: News,
+  contact: Contact,
+  careers: Careers,
+  notFound: NotFound,
+} as const;
+
+type PageKey = keyof typeof pages;
+
 export default function App() {
+  const pageKey = (document.body.dataset.page || 'notFound') as PageKey;
+  const Page = pages[pageKey] || NotFound;
+
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/quality" element={<Quality />} />
-        <Route path="/leadership" element={<Leadership />} />
-        <Route path="/suppliers" element={<Suppliers />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/procurement-portal" element={<ProcurementPortal />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Page />
     </Layout>
   );
 }

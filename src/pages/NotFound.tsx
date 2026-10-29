@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
 import { useSeo } from '@/hooks/useSeo';
 
@@ -19,14 +18,14 @@ export default function NotFound() {
           The page you're looking for doesn't exist or has been moved. Let's get you back on track.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Link to="/" className="btn-accent">
+          <a href="/" className="btn-accent">
             <Home className="h-4 w-4" />
             Back to Home
-          </Link>
-          <Link to="/contact" className="btn-outline border-navy-500 bg-transparent text-white hover:bg-white/10">
+          </a>
+          <a href="/contact/" className="btn-outline border-navy-500 bg-transparent text-white hover:bg-white/10">
             <ArrowLeft className="h-4 w-4" />
             Contact Us
-          </Link>
+          </a>
         </div>
       </div>
     </section>

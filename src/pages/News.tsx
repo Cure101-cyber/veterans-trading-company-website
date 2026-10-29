@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Tag } from 'lucide-react';
 import { useSeo } from '@/hooks/useSeo';
 import { NEWS_ITEMS } from '@/data/company';

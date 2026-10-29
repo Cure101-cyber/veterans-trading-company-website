@@ -3,8 +3,8 @@ export const COMPANY = {
   shortName: 'VTC',
   tagline: 'Supply Chain Solutions and Procurement Support',
   email: 'info@veteranstradingcompanyinc.com',
-  phone: '+1 385-715-1973',
-  phoneHref: 'tel:+13857151973',
+  phone: '+1 385-715-1970',
+  phoneHref: 'tel:+13857151970',
   address: {
     line1: '15 WEST SOUTH TEMPLE',
     line2: 'GATEWAY TOWER WEST, SUITE 1050',
@@ -35,13 +35,17 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', path: '/' },
-  { label: 'About Us', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'Quality & Certifications', path: '/quality' },
-  { label: 'Leadership', path: '/leadership' },
-  { label: 'Suppliers', path: '/suppliers' },
-  { label: 'News', path: '/news' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Services', path: '/services/' },
+  { label: 'Suppliers', path: '/suppliers/' },
+  { label: 'News', path: '/news/' },
+  { label: 'Contact', path: '/contact/' },
+  { label: 'Careers', path: '/careers/' },
+];
+
+export const ABOUT_NAV_ITEMS: NavItem[] = [
+  { label: 'About Us', path: '/about/' },
+  { label: 'Quality & Certifications', path: '/quality/' },
+  { label: 'Leadership', path: '/leadership/' },
 ];
 
 export type Service = {

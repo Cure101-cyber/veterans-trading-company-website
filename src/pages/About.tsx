@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { ArrowRight, Target, Eye, Award, HandshakeIcon, Building2 } from 'lucide-react';
 import { useSeo } from '@/hooks/useSeo';
 import { COMPANY } from '@/data/company';

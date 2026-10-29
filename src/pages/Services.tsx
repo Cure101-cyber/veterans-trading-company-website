@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import {
   Warehouse,
   Users,
@@ -104,13 +103,13 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/contact"
+                <a
+                  href="/contact/"
                   className="mt-8 inline-flex items-center gap-2 font-semibold text-navy-700 hover:text-navy-900"
                 >
                   Request a consultation
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </div>
               <div className={reversed ? 'lg:order-1' : ''}>
                 <img
