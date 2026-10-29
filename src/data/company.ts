@@ -3,7 +3,7 @@ export const COMPANY = {
   shortName: 'VTC',
   tagline: 'Supply Chain Solutions and Procurement Support',
   email: 'info@veteranstradingcompanyinc.com',
-  phone: '+1 385-715-1970',
+  phone: '385-715-1970',
   phoneHref: 'tel:+13857151970',
   address: {
     line1: '15 WEST SOUTH TEMPLE',
@@ -15,7 +15,6 @@ export const COMPANY = {
   },
   website: 'https://vtcusa.com',
   linkedin: 'https://www.linkedin.com/company/vtcusa',
-  procurementPortalEmail: 'csgrainger@vtcusa.com',
   founded: 2005,
   description:
     'A Service-Disabled Veteran-Owned Small Business providing a full range of integrated, end-to-end supply chain solutions and procurement support programs to commercial firms and Federal prime contractors.',
@@ -42,10 +41,11 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Careers', path: '/careers/' },
 ];
 
-export const ABOUT_NAV_ITEMS: NavItem[] = [
-  { label: 'About Us', path: '/about/' },
-  { label: 'Quality & Certifications', path: '/quality/' },
+export const ABOUT_NAV_ITEM: NavItem = { label: 'About Us', path: '/about/' };
+
+export const ABOUT_SUB_NAV_ITEMS: NavItem[] = [
   { label: 'Leadership', path: '/leadership/' },
+  { label: 'Quality & Certifications', path: '/quality/' },
 ];
 
 export type Service = {

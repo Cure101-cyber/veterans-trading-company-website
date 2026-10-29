@@ -1,25 +1,17 @@
+import { lazy, Suspense } from 'react';
 import Layout from '@/components/Layout';
-import Home from '@/pages/Home';
-import About from '@/pages/About';
-import Services from '@/pages/Services';
-import Quality from '@/pages/Quality';
-import Leadership from '@/pages/Leadership';
-import Suppliers from '@/pages/Suppliers';
-import News from '@/pages/News';
-import Contact from '@/pages/Contact';
-import Careers from '@/pages/Careers';
 import NotFound from '@/pages/NotFound';
 
 const pages = {
-  home: Home,
-  about: About,
-  services: Services,
-  quality: Quality,
-  leadership: Leadership,
-  suppliers: Suppliers,
-  news: News,
-  contact: Contact,
-  careers: Careers,
+  home: lazy(() => import('@/pages/Home')),
+  about: lazy(() => import('@/pages/About')),
+  services: lazy(() => import('@/pages/Services')),
+  quality: lazy(() => import('@/pages/Quality')),
+  leadership: lazy(() => import('@/pages/Leadership')),
+  suppliers: lazy(() => import('@/pages/Suppliers')),
+  news: lazy(() => import('@/pages/News')),
+  contact: lazy(() => import('@/pages/Contact')),
+  careers: lazy(() => import('@/pages/Careers')),
   notFound: NotFound,
 } as const;
 
@@ -31,7 +23,9 @@ export default function App() {
 
   return (
     <Layout>
-      <Page />
+      <Suspense fallback={null}>
+        <Page />
+      </Suspense>
     </Layout>
   );
 }
